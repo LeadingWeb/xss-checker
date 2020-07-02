@@ -1,6 +1,6 @@
 {
   "name": "xss-checker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This package tries to prevent cross-site scripting (XSS) by checking user input for malicious javascript!",
   "main": "index.js",
   "scripts": {
