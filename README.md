@@ -18,8 +18,12 @@ To use it on your front-end you can just copy the 'front-xss-checker' folder int
 
 # Usage
 
-After importing, you can just check any string for XSS attempts by using the function:
+After importing, you can just check any string for XSS attempts by using the function (front-end):
 `validateXSS("Your input string");`
+
+(nodejs) 
+`xss.validate('Your input string');`
+
 
 This function returns the matches against a current XSS-Payload list, so if it returns 0 the input is probably safe.
 
@@ -27,20 +31,21 @@ This function returns the matches against a current XSS-Payload list, so if it r
 # NPM Example
 
 ```
-import {validateXSS} from 'validateXSS';
+const Xss = require('./index');
+const xss = new Xss;
 
 //The user input you want to check
 const input = "<svg onload=alert(1)>";
 
-const check = validateXSS(input);
-if (check == 0) {
-
-    //check == 0 means the input is safe, so you can add it to your database
-
-    //db.insert(input)
-} else {
-    console.log(`XSS! ${{check}});
-}
+xss.init()
+    .then(() => {
+        if(xss.validate(input) === 0) {
+            //The input is clean and can be added to the database
+        }else {
+            //The input contains malicious Javascript
+            console.log(input);
+        }
+    })
 
 ```
 

@@ -1,0 +1,32 @@
+{
+  "name": "xss-checker",
+  "version": "1.0.0",
+  "description": "This package tries to prevent cross-site scripting (XSS) by checking user input for malicious javascript!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeadingWeb/xss-checker.git"
+  },
+  "keywords": [
+    "cross-site",
+    "scripting",
+    "XSS",
+    "xss-checker",
+    "input",
+    "validation",
+    "xss",
+    "check"
+  ],
+  "author": "Fabio Keller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeadingWeb/xss-checker/issues"
+  },
+  "homepage": "https://github.com/LeadingWeb/xss-checker#readme",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
+}
